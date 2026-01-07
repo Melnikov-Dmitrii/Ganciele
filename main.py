@@ -16,7 +16,7 @@ bot = commands.Bot(command_prefix = "!", intents = intents)
 
 @bot.event
 async def on_ready():
-    print(f'Бот {bot.user} подключился к Discord!')
+    print(f'Bot {bot.user} has connected to Discord!')
 
 @bot.command()
 async def start(ctx):
@@ -88,7 +88,7 @@ async def list(ctx):
 
 
 @bot.command()
-async def ready(ctx):
+async def begin(ctx):
     game = games.get(ctx.channel.id)
     if game == None:
         await ctx.send("There is not game here")
